@@ -8,6 +8,9 @@ import argparse
 import const
 
 def main():
+    if len(sys.argv) < 3:
+        sys.exit('Arguments Missing')
+        
     movie_name = sys.argv[1]
     apikey = sys.argv[2]
 
