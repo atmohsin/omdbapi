@@ -9,10 +9,7 @@ import const
 
 def main():
     movie_name = sys.argv[1]
-
-    #todo apikey must be provided by the user
-    apikey = "BanMePlz"
-    #YEAR = "1969"
+    apikey = sys.argv[2]
 
     # defining a params dict for the parameters to be sent to the API
     PARAMS = {'t':movie_name,"apikey":apikey}
