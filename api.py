@@ -10,14 +10,13 @@ import const
 def main():
     if len(sys.argv) < 3:
         sys.exit('Arguments Missing')
-        
+
     movie_name = sys.argv[1]
     apikey = sys.argv[2]
 
     # defining a params dict for the parameters to be sent to the API
     PARAMS = {'t':movie_name,"apikey":apikey}
     rotten_tomatoes_rating = getRatings(PARAMS)
-    #print rotten_tomatoes_rating
 
     if rotten_tomatoes_rating is not None:
         print('{0} : {1}'.format('rotten tomatoes ratings',rotten_tomatoes_rating))
@@ -43,7 +42,6 @@ def getRequests(req_url, req_params):
     data = r.json()
     ini_string = json.dumps(data)
     decoded = json.loads(ini_string)
-    #print decoded
     return decoded
   
 if __name__== "__main__":

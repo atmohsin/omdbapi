@@ -1,4 +1,5 @@
 FROM python:2.7-slim
-COPY . /src
-RUN pip install -r /src/requirements.txt
-CMD ["python", "/src/api.py"]
+COPY . /omdbapi 
+WORKDIR /omdbapi
+RUN pip install -r /omdbapi/requirements.txt
+ENTRYPOINT ["python","/omdbapi/api.py"]
