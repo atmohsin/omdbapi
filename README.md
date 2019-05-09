@@ -1,3 +1,3 @@
 docker build -t omdbapi .
 
-docker run omdbapi python /src/api.py "True Grit" <api_key>
+docker run omdbapi python /src/api.py "batman" <api_key>
