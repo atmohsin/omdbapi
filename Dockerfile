@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:alpine3.7
 COPY . /omdbapi 
 WORKDIR /omdbapi
 RUN pip install -r /omdbapi/requirements.txt
